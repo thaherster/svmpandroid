@@ -4,10 +4,7 @@
         fetch="https://android.googlesource.com/"
         review="https://android-review.googlesource.com/" />
 
-    <remote name="github"
-        fetch="https://github.com/" />
-    <remote name="svmp"
-        fetch="https://github.com/SVMP/" />
+   
     <default revision="master"
         remote="aosp"
         sync-j="4" />
