@@ -3,17 +3,14 @@
     <remote  name="aosp"
         fetch="https://android.googlesource.com/"
         review="https://android-review.googlesource.com/" />
+
     <remote name="github"
         fetch="https://github.com/" />
-
     <remote name="svmp"
         fetch="https://github.com/SVMP/" />
-    <remote name="google"
-        fetch="https://android.googlesource.com/" />
     <default revision="master"
         remote="aosp"
         sync-j="4" />
-
     <project path="build/make" name="platform/build" groups="pdk" >
         <copyfile src="core/root.mk" dest="Makefile" />
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -54,7 +51,6 @@
     <project path="device/generic/uml" name="device/generic/uml" groups="device,pdk" />
     <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
     <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" />
-    <!--devices we don't need-->
     <!--<project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device,pdk" />-->
     <!--<project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device,pdk" />-->
     <!--<project path="device/google/atv" name="device/google/atv" groups="device,broadcom_pdk,generic_fs,pdk" />-->
@@ -452,7 +448,6 @@
     <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
     <project path="frameworks/support" name="platform/frameworks/support" groups="pdk-cw-fs,pdk-fs" />
     <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
-    <!--devices we don't need-->
     <!--<project path="hardware/akm" name="platform/hardware/akm" groups="pdk" />-->
     <!--<project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />-->
     <!--<project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />-->
@@ -723,8 +718,6 @@
     <project path="vendor/qcom/walleye" name="platform/vendor/aosp/qcom/walleye" groups="vendor" clone-depth="1" />
     <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
-
-
     <!-- SVMP -->
 
     <project path="device/mitre/svmp" remote="svmp" revision="master" name="android_device_mitre_svmp" >
@@ -748,6 +741,6 @@
     <project path="external/mesa3d" remote="github" revision="svmp-2.x" name="SVMP/android_external_mesa3d" />
     <project path="external/llvm" remote="github" revision="svmp-2.x" name="SVMP/android_external_llvm" groups="pdk" />
     <!--<project path="hardware/intel/hwcomposer" remote="github" revision="release/android-4.2.2_r1-ia3" name="android-ia/hardware_intel_hwcomposer" />-->
-    <project path="hardware/intel/hwcomposer" remote="google"  name="platform/hardware/intel/img/hwcomposer" />
+    <project path="hardware/intel/hwcomposer" name="platform/hardware/intel/img/hwcomposer" />
 
 </manifest>
